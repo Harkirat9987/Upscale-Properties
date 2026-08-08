@@ -1,0 +1,167 @@
+/* HERO */
+.home-hero {
+  padding: clamp(140px, 14vw + 60px, 220px) 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(216, 205, 68, 0.16), transparent 55%);
+  pointer-events: none;
+}
+.home-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+.home-hero__title {
+  white-space: pre-line;
+  color: var(--c-white);
+  margin-bottom: 22px;
+}
+.home-hero__body { max-width: 420px; color: var(--c-dark-text); margin-bottom: 32px; }
+.home-hero__media { position: relative; }
+.home-hero__stat {
+  position: absolute;
+  left: -40px;
+  bottom: -30px;
+  background: var(--c-gold);
+  color: var(--c-evergreen-dark);
+  padding: 22px 26px;
+  border-radius: var(--radius-md);
+  max-width: 220px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.home-hero__stat .counter {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.home-hero__stat p { margin: 0; font-size: 0.85rem; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .home-hero__grid { grid-template-columns: 1fr; }
+  .home-hero__stat { left: 16px; bottom: 16px; }
+}
+
+/* INTRO STATEMENT */
+.intro-statement { text-align: center; }
+.intro-statement__text {
+  max-width: 980px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* SERVICES STACK */
+.services-stack__item {
+  padding: 36px 32px;
+  background: var(--c-bg-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border);
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.services-stack__item:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(23,36,27,0.08); }
+.services-stack__no {
+  display: inline-flex;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--c-gold-dark);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.services-stack__item h2 { font-size: 1.5rem; margin-bottom: 12px; }
+.services-stack__item p { margin: 0; color: var(--c-meta); }
+
+/* STATS ROW */
+.stats-row__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 30px 0;
+  border-top: 1px solid var(--c-border);
+}
+.stats-row__num {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 2rem + 2vw, 4rem);
+  color: var(--c-evergreen);
+  font-weight: 600;
+}
+.stats-row__label { color: var(--c-meta); }
+
+/* MARQUEE BAND */
+.marquee-band { padding: 20px 0 40px; }
+
+/* COLLAGE */
+.collage__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.collage__item--1, .collage__item--3 { transform: translateY(24px); }
+@media (max-width: 900px) {
+  .collage__grid { grid-template-columns: repeat(2, 1fr); }
+  .collage__item--1, .collage__item--3 { transform: none; }
+}
+
+/* SHOWCASE */
+.showcase__grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.showcase__heading { margin-bottom: 26px; }
+.showcase__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--c-evergreen);
+  border-bottom: 1px solid var(--c-evergreen);
+  padding-bottom: 4px;
+}
+.showcase__link:hover { color: var(--c-gold-dark); border-color: var(--c-gold-dark); }
+@media (max-width: 900px) {
+  .showcase__grid { grid-template-columns: 1fr; }
+}
+
+/* PARTNERS */
+.partners__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 60px;
+  opacity: 0.65;
+}
+.partners__logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--c-meta);
+}
+
+/* TEAM */
+.team-section__head { max-width: 720px; margin-bottom: 50px; }
+.team-section__head h1 { color: var(--c-white); }
+
+/* ACHIEVEMENTS */
+.achievements__heading { max-width: 760px; margin-bottom: 50px; }
+.achievements__col {
+  border-top: 1px solid var(--c-border);
+  padding-top: 24px;
+}
+.achievements__col h6 { color: var(--c-gold-dark); margin-bottom: 14px; }
+.achievements__col p { margin: 0 0 8px; color: var(--c-title); font-family: var(--font-heading); }
+.achievements__year { display: block; margin-top: 14px; color: var(--c-meta); font-size: 0.85rem; }
+
+/* CTA */
+.cta-band__inner { max-width: 640px; }
+.cta-band h2 { color: var(--c-white); }
+.cta-band .text-lead { color: var(--c-dark-text); margin-bottom: 30px; }

@@ -1,0 +1,16 @@
+.page-hero {
+  padding-top: clamp(150px, 10vw + 90px, 210px);
+}
+
+.page-hero__crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  text-transform: capitalize;
+}
+.page-hero__crumbs a { color: var(--c-dark-text); }
+.page-hero__crumbs a:hover { color: var(--c-gold); }
+.page-hero__crumbs span:last-child { color: var(--c-gold); }
+
+.page-hero h1 { max-width: 760px; }

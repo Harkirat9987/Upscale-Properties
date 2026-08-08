@@ -1,0 +1,42 @@
+:root {
+  /* ---- Brand palette (client-supplied) ---- */
+  --c-verdant: #75AC3A;   /* secondary accent: icons, hovers, badges */
+  --c-evergreen: #0E6033; /* dark surfaces: header, footer, headings, buttons */
+  --c-ivory: #F6F4F0;     /* page background */
+  --c-gold: #D8CD44;      /* highlight accent: links, labels, active states */
+
+  --c-evergreen-dark: #0A4A27;
+  --c-verdant-dark: #5E8C2E;
+  --c-gold-dark: #C2B830;
+
+  --c-white: #FFFFFF;
+  --c-bg: var(--c-ivory);
+  --c-bg-2: var(--c-white);
+  --c-border: #DDD9CC;
+  --c-title: #17241B;
+  --c-text: #3B4A3E;
+  --c-meta: #8B9488;
+
+  --c-dark-bg: var(--c-evergreen);
+  --c-dark-text: #E7EFE6;
+  --c-dark-meta: #A9C3AC;
+  --c-dark-border: rgba(255, 255, 255, 0.14);
+
+  /* ---- Typography ---- */
+  --font-heading: "Rethink Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* ---- Layout ---- */
+  --container-width: 1290px;
+  --container-pad: 24px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.3s;
+  --dur-med: 0.6s;
+  --dur-slow: 0.9s;
+}

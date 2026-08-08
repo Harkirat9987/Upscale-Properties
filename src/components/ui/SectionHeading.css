@@ -1,0 +1,13 @@
+.section-heading {
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.section-heading--center {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.section-heading--center .overline { justify-content: center; }
+.section-heading h2 { margin-bottom: 12px; }
+.section-heading__subtitle { margin-bottom: 0; }

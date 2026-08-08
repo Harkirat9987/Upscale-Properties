@@ -1,0 +1,4 @@
+.team-member__img { margin-bottom: 20px; transition: transform 0.5s var(--ease); }
+.team-member:hover .team-member__img { transform: scale(1.03); }
+.team-member__name { margin-bottom: 4px; text-transform: none; font-size: 1.1rem; letter-spacing: 0; color: var(--c-title); }
+.team-member__role { color: var(--c-meta); margin: 0; font-size: 0.9rem; }

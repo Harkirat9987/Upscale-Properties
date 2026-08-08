@@ -1,0 +1,30 @@
+.ftabs__heads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 40px;
+}
+.ftabs__head {
+  background: none;
+  border: none;
+  padding: 16px 0;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--c-meta);
+  position: relative;
+  transition: color var(--dur-fast) var(--ease);
+}
+.ftabs__head::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: var(--c-gold);
+  transform: scaleX(0);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.ftabs__head.is-active { color: var(--c-title); }
+.ftabs__head.is-active::after { transform: scaleX(1); }
+
+.ftabs__panel { max-width: 850px; }
