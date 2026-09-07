@@ -16,7 +16,7 @@
   font-family: var(--font-heading);
   font-size: 1.15rem;
 }
-.section--dark .accordion__trigger { color: var(--c-white); }
+.section--dark .accordion__trigger { color: var(--c-dark-text); }
 
 .accordion__index {
   font-family: var(--font-body);
@@ -25,7 +25,7 @@
   font-size: 0.9rem;
   flex-shrink: 0;
 }
-.section--dark .accordion__index { color: var(--c-gold); }
+.section--dark .accordion__index { color: var(--c-evergreen); }
 
 .accordion__question { flex: 1; }
 
@@ -43,11 +43,11 @@
   transition: transform 0.35s var(--ease);
 }
 .section--dark .accordion__plus::before,
-.section--dark .accordion__plus::after { background: var(--c-white); }
+.section--dark .accordion__plus::after { background: var(--c-dark-text); }
 .accordion__plus::before { top: 50%; left: 0; width: 100%; height: 2px; transform: translateY(-50%); }
 .accordion__plus::after { left: 50%; top: 0; width: 2px; height: 100%; transform: translateX(-50%); }
 .accordion__item.is-open .accordion__plus::after { transform: translateX(-50%) rotate(90deg); opacity: 0; }
-.accordion__item.is-open .accordion__plus::before { background: var(--c-gold); }
+.accordion__item.is-open .accordion__plus::before { background: var(--c-evergreen); }
 
 .accordion__panel {
   overflow: hidden;

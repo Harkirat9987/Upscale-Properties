@@ -1,186 +1,113 @@
 // Real copy gathered from the reference site (form.ancorathemes.com), adapted for this rebuild.
 
+// `target` scrolls to a section id on the homepage (null = top of page).
+// `to` links to a separate routed page instead.
 export const NAV = [
-  {
-    label: "Home",
-    to: "/",
-  },
-  {
-    label: "Pages",
-    children: [
-      { label: "About Us", to: "/about-us" },
-      { label: "Our Team", to: "/our-team" },
-      { label: "Testimonials", to: "/testimonials" },
-      { label: "Pricing", to: "/pricing" },
-      { label: "FAQs", to: "/faqs" },
-      { label: "Contact Us", to: "/contact-us" },
-    ],
-  },
-  {
-    label: "Services",
-    children: [
-      { label: "Services — 1", to: "/services-1" },
-      { label: "Services — 2", to: "/services-2" },
-    ],
-  },
-  {
-    label: "Portfolio",
-    children: [
-      { label: "Our Work — 1", to: "/our-work-1" },
-      { label: "Our Work — 2", to: "/our-work-2" },
-      { label: "Our Work — 3", to: "/our-work-3" },
-      { label: "Gallery", to: "/gallery" },
-      { label: "Single Project", to: "/single-project" },
-    ],
-  },
-  {
-    label: "Blog",
-    children: [
-      { label: "Blog — Standard", to: "/blog-standard" },
-      { label: "Blog — Grid", to: "/blog-grid" },
-    ],
-  },
-  {
-    label: "Shop",
-    children: [
-      { label: "Product List", to: "/shop" },
-      { label: "Cart", to: "/cart" },
-      { label: "Checkout", to: "/checkout" },
-      { label: "My Account", to: "/my-account" },
-    ],
-  },
+  { label: "Home", target: null },
+  { label: "About Us", to: "/about-us" },
+  { label: "Projects", to: "/projects" },
+  { label: "Contact Us", target: "contact" },
 ];
+
+export const BRAND = "Upscale Properties";
 
 export const FOOTER = {
   tagline:
-    "Form is an innovative design studio creating inspiring, functional, and sustainable spaces through architecture and interiors that enhance everyday life.",
-  address: "245 West 29th Street, Suite 1201, New York, NY 10001",
-  email: "hello@form-studio.com",
-  phone: "555-123-4567",
-  links: [
-    { label: "Home", to: "/" },
-    { label: "About Us", to: "/about-us" },
-    { label: "Portfolio", to: "/our-work-1" },
-    { label: "Services", to: "/services-1" },
-    { label: "Contact Us", to: "/contact-us" },
-  ],
+    "Upscale Properties is a plotted development company focused on creating well-planned land opportunities designed for long-term value and growth.",
+  address: "Details coming soon",
+  email: "Details coming soon",
+  phone: "Details coming soon",
   socials: [
     { label: "Facebook", to: "https://www.facebook.com/" },
-    { label: "Behance", to: "https://www.behance.net/" },
     { label: "Instagram", to: "https://www.instagram.com/" },
-    { label: "Dribbble", to: "https://dribbble.com/" },
+    { label: "LinkedIn", to: "https://www.linkedin.com/" },
   ],
 };
 
 export const HOME = {
   hero: {
-    title: "Architecture brand\nfor modern cities",
-    body: "We design spaces that seamlessly blend beauty, function, and care for the planet—crafted around your vision and needs.",
-    cta: { label: "Get Started", to: "/about-us" },
-    stat: { to: 4, suffix: "k+", label: "Great design unites people and places" },
+    title: "Land thoughtfully\nplanned for the future.",
+    body: "Upscale Properties creates thoughtfully planned plotted developments in high-potential locations, combining strategic planning, transparency, and long-term value.",
+    cta: { label: "Get in Touch" },
+    cards: ["Investment-led thinking", "Thoughtful land development"],
   },
   intro: {
-    title: "Discover thoughtful spaces made for daily living and work needs with design solutions that fit every unique project vision",
+    lead: "A plot is more than a piece of land. It is the beginning of a home, an investment, and a future.",
+    body: "At Upscale Properties, we develop plotted communities with a long-term perspective, bringing together strategic locations, thoughtful planning, and the confidence that comes from making informed decisions.",
   },
   stack: [
     {
       no: "01",
-      title: "Architectural design",
-      body: "We provide design services for residential, commercial, and institutional projects. Our team guides clients from concept through construction, ensuring each space is functional, aesthetically pleasing, and responsible.",
+      title: "Strategic Locations",
+      body: "We look beyond today's demand to identify locations with strong potential for tomorrow.",
     },
     {
       no: "02",
-      title: "Interior design",
-      body: "Our interior design services create functional interiors tailored to each client’s lifestyle or brand. We manage space planning, materials, furnishings, and lighting, ensuring a cohesive, personalized result.",
+      title: "Thoughtful Planning",
+      body: "Every development is planned around connectivity, infrastructure, accessibility, and future growth.",
     },
     {
       no: "03",
-      title: "Eco consulting",
-      body: "We offer consulting on sustainable design, helping clients reduce environmental impact and achieve LEED or WELL certifications. Our team evaluates energy, materials, and indoor quality to create healthier, greener spaces.",
+      title: "Long-Term Value",
+      body: "We create developments with a focus on enduring value, not short-term opportunity.",
     },
   ],
   stats: [
-    { to: 13, suffix: "+", label: "Years of experience" },
-    { to: 45, suffix: "", label: "Completed works" },
+    { to: 25, suffix: "+", label: "Years of Financial & Investment Expertise" },
+    { to: 2, suffix: "+", label: "High-Potential Cities" },
   ],
-  tabs: [
-    "Architectural design solutions",
-    "Interior design expertise",
-    "Sustainable design insight",
-    "Commercial interior design",
-    "Lighting design solutions",
-  ],
+  marquee: "Built around the value of a better investment.",
   team: {
-    title: "Meet the Form team",
-    heading: "Get to know our studio’s leaders visionaries",
+    title: "Meet the team",
+    heading: "The people behind Upscale Properties",
     members: [
-      { name: "David Chen", role: "Principal Architect" },
-      { name: "Elena Martinez", role: "Design Lead" },
-      { name: "John Singh", role: "Interior Stylist" },
+      { name: "Venu Gopal A", role: "Founder & Managing Director at FinQuest" },
+      { name: "Murali Shastri", role: "Joint Partner at Vishwa Projects" },
     ],
   },
-  achievements: {
-    title: "Recognizing our achievements",
-    heading: "Our studio’s honors and achievements",
-    groups: [
-      { year: "2025", label: "Form’s accolades", items: ["AIA emerging firm award", "Sustainability awards"] },
-      { year: "2024", label: "Interior design award", items: ["Project of the year", "Innovation honors"] },
-      { year: "2023", label: "GreenLeaf prize", items: ["Merit distinction", "Global design award"] },
-    ],
-  },
-  cta: {
-    title: "Let us create inspiring spaces. Our experts can start your project this week",
-    body: "We design inviting spaces and innovative forms that enrich lives, support growth, and foster strong connections.",
-    link: { label: "View Details", to: "/our-work-1" },
+  contact: {
+    heading: "Let’s talk about your next plot.",
+    body: "Whether you’re exploring a plotted development, looking for an investment opportunity, or simply want to know more about our projects, our team is here to help.",
+    emphasis: "Get in touch with Upscale Properties to explore available projects across Bangalore and Mysore.",
+    cta: "Get in Touch",
+    note: "We’ll get back to you with the relevant project information and next steps.",
   },
 };
 
 export const ABOUT = {
-  overline: "Spaces shaped with purpose",
   title: "About Us",
   intro: {
-    overline: "Spaces shaped with purpose",
-    heading: "We design & enrich living spaces",
+    heading: "More than land.",
+    lead: "A well-planned foundation for the future.",
     paragraphs: [
-      "Form is a bold architecture and interior design studio reimagining how people live, work, and creatively connect with their spaces, inspiring joy, comfort, and meaningful experiences every day.",
-      "Our tailored design process brings each client's vision to life. Through deep collaboration, thoughtful research, and innovative strategies, we craft spaces that seamlessly marry beauty, efficiency, sustainability, comfort, functionality, and timeless elegance for lasting impact.",
-      "We champion creativity, teamwork, and integrity, making sure each design reflects our passion for quality, innovation, and attentive client care. Since 2015, Form has grown as a trusted, award-winning design studio, delivering memorable and inspiring spaces for clients across the globe.",
+      "Upscale Properties brings together financial expertise and hands-on real estate development experience to create thoughtfully planned plotted developments with a long-term view of value.",
+      "Our foundation is built on two complementary strengths: deep financial understanding and practical development experience. With extensive experience across banking, investment banking and residential real estate, the team brings a disciplined approach to evaluating opportunities, structuring projects and creating developments that stand on sound fundamentals.",
+      "From land aggregation and project planning to execution and sales, Upscale focuses on creating plotted developments that are well considered, transparent and positioned for long-term growth.",
     ],
+    closing: "We believe good land is not just about where it is today, but what it can become tomorrow.",
   },
   stats: {
-    heading: "Design in numbers",
-    subheading: "We create spaces that last, blending art and function for unique results across every project.",
+    heading: "By the Numbers",
     items: [
-      { to: 98, suffix: "%", label: "Returning partners" },
-      { to: 84, suffix: "+", label: "Clients supported" },
-      { to: 13, suffix: "", label: "Time in practice" },
-      { to: 157, suffix: "+", label: "Spaces completed" },
-      { to: 47, suffix: "", label: "Finished designs" },
-      { to: 12, suffix: "", label: "Honors earned" },
+      { to: 25, suffix: "+", unit: "Years", label: "Financial & banking experience" },
+      { to: 10000, prefix: "₹", suffix: "+", unit: "Cr", label: "Real estate funding raised" },
+      { to: 2000, prefix: "₹", suffix: "+", unit: "Cr", label: "Non-real estate debt raised" },
+      { to: 5, unit: "Lakh+ Sq. Ft.", label: "Residential development delivered" },
     ],
   },
-  featured: [
-    { title: "Modern entry stairs", tag: "Exterior Design" },
-    { title: "Poolside evening retreat", tag: "Outdoor Living" },
-    { title: "Charming red house", tag: "Residential Architecture" },
-  ],
+  locations: {
+    heading: "Our Locations",
+    items: [
+      { title: "Bangalore" },
+      { title: "Mysore" },
+    ],
+  },
   expertise: {
-    heading: "Our expertise",
-    subheading: "We design & shape spaces for life",
+    heading: "Our Expertise",
     items: [
-      { title: "Architectural design", body: "We provide design services for residential, commercial, and institutional projects, ensuring quality, creativity, and lasting value." },
-      { title: "Interior design", body: "Our interior design services create functional interiors tailored to each client's lifestyle or brand, blending comfort, style, and innovation." },
-      { title: "Eco consulting", body: "We offer consulting on sustainable design, helping clients reduce environmental impact and achieve LEED or WELL certifications." },
-    ],
-  },
-  blogTeaser: {
-    heading: "Inspired interior spaces",
-    subheading: "We envision & design",
-    posts: [
-      { category: "Design Inspiration", title: "How architectural details shape the feel of a home", date: "Sep 10, 2025", comments: 3 },
-      { category: "Residential Design", title: "Open-plan living rooms that foster connection and flow", date: "Sep 10, 2025", comments: 0 },
-      { category: "Commercial Spaces", title: "Sustainable materials that elevate home interiors", date: "Sep 10, 2025", comments: 0 },
-      { category: "Project Showcase", title: "Maximizing comfort and style with minimalist interiors", date: "Sep 10, 2025", comments: 0 },
+      { title: "Land Development", body: "Identifying and developing plotted land opportunities with a focus on location, planning and long-term value." },
+      { title: "Land Aggregation & Structuring", body: "Bringing together landowners, capital and development opportunities through structured partnerships and JDA relationships." },
+      { title: "Investment & Financial Structuring", body: "Applying strong financial expertise to evaluate opportunities, structure capital and build financially sound projects." },
     ],
   },
 };

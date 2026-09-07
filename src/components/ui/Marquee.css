@@ -22,7 +22,7 @@
   color: transparent;
   -webkit-text-stroke: 1.5px currentColor;
   padding-right: 3.5vw;
-  color: var(--c-evergreen);
+  color: var(--c-title);
   opacity: 0.9;
 }
 
@@ -36,7 +36,7 @@
   vertical-align: middle;
 }
 
-.section--dark .marquee__group { color: var(--c-white); }
+.section--dark .marquee__group { color: var(--c-dark-text); }
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }

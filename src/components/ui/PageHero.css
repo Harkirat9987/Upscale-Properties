@@ -9,8 +9,8 @@
   margin-bottom: 22px;
   text-transform: capitalize;
 }
-.page-hero__crumbs a { color: var(--c-dark-text); }
-.page-hero__crumbs a:hover { color: var(--c-gold); }
-.page-hero__crumbs span:last-child { color: var(--c-gold); }
+.page-hero__crumbs a { color: var(--c-dark-meta); }
+.page-hero__crumbs a:hover { color: var(--c-evergreen); }
+.page-hero__crumbs span:last-child { color: var(--c-evergreen); }
 
 .page-hero h1 { max-width: 760px; }

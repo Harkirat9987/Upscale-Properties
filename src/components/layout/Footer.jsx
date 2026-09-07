@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import { FOOTER } from "../../data/content";
+import { FOOTER, BRAND, NAV } from "../../data/content";
 import Marquee from "../ui/Marquee";
 import Reveal from "../ui/Reveal";
+import useAnchorNav from "../../hooks/useAnchorNav";
 import "./Footer.css";
 
 export default function Footer() {
+  const goTo = useAnchorNav();
+
   return (
     <footer className="site-footer">
       <div className="site-footer__marquee">
@@ -13,21 +16,27 @@ export default function Footer() {
 
       <div className="container site-footer__grid">
         <Reveal className="site-footer__brand">
-          <Link to="/" className="site-footer__logo">Form<span>.</span></Link>
+          <Link to="/" className="site-footer__logo">{BRAND}</Link>
           <p>{FOOTER.tagline}</p>
         </Reveal>
 
         <Reveal delay={80}>
           <h6>Contact</h6>
           <p className="site-footer__addr">{FOOTER.email}</p>
-          <p className="site-footer__addr">New York —<br />{FOOTER.address}</p>
+          <p className="site-footer__addr">{FOOTER.address}</p>
         </Reveal>
 
         <Reveal delay={160}>
           <h6>Links</h6>
           <ul className="site-footer__links">
-            {FOOTER.links.map((l) => (
-              <li key={l.label}><Link to={l.to}>{l.label}</Link></li>
+            {NAV.map((item) => (
+              <li key={item.label}>
+                {item.to ? (
+                  <Link to={item.to}>{item.label}</Link>
+                ) : (
+                  <a href={item.target ? `#${item.target}` : "/"} onClick={goTo(item.target)}>{item.label}</a>
+                )}
+              </li>
             ))}
           </ul>
         </Reveal>
@@ -45,8 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="container site-footer__bottom">
-        <p>© {new Date().getFullYear()}. All rights are reserved.</p>
-        <p>Design system by <a href="#" onClick={(e) => e.preventDefault()}>Form Studio</a></p>
+        <p>© {new Date().getFullYear()} {BRAND}. All rights are reserved.</p>
       </div>
     </footer>
   );

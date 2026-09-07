@@ -1,8 +1,7 @@
 import { useState } from "react";
 import PageHero from "../components/ui/PageHero";
 import Reveal from "../components/ui/Reveal";
-import ImgPlaceholder from "../components/ui/ImgPlaceholder";
-import { FOOTER } from "../data/content";
+import { HOME } from "../data/content";
 import "./pages-common.css";
 
 export default function ContactUs() {
@@ -15,38 +14,25 @@ export default function ContactUs() {
 
   return (
     <>
-      <PageHero overline="We'd love to hear from you" title="Contact Us" />
+      <PageHero title="Contact Us" />
       <section className="section">
         <div className="container contact-grid">
-          <Reveal className="contact-info">
-            <ImgPlaceholder ratio="4 / 3" seed={1} />
-            <div className="contact-info__item">
-              <h6>Address</h6>
-              <p>New York — {FOOTER.address}</p>
-            </div>
-            <div className="contact-info__item">
-              <h6>Email</h6>
-              <p>{FOOTER.email}</p>
-            </div>
-            <div className="contact-info__item">
-              <h6>Phone</h6>
-              <p>{FOOTER.phone}</p>
-            </div>
-            <div className="contact-info__item">
-              <h6>Office hours</h6>
-              <p>Mon–Fri 9:00AM — 6:00PM</p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={120}>
+          <div>
+            <Reveal as="h2">{HOME.contact.heading}</Reveal>
+            <Reveal delay={100} as="p" className="text-lead">{HOME.contact.body}</Reveal>
+            <Reveal delay={140} as="p" className="text-lead" style={{ fontWeight: 700 }}>{HOME.contact.emphasis}</Reveal>
+          </div>
+          <Reveal delay={150}>
             <form className="contact-form" onSubmit={submit}>
-              <input type="text" placeholder="Your name" required />
-              <input type="email" placeholder="Your email" required />
-              <input type="text" placeholder="Subject" />
-              <textarea placeholder="Tell us about your project" required />
-              <button type="submit" className="btn btn--primary">
-                {sent ? "Message sent!" : "Send Message"}
+              <input type="text" placeholder="Name" required />
+              <input type="tel" placeholder="Phone Number" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="text" placeholder="Location of Interest" />
+              <textarea placeholder="Message" />
+              <button type="submit" className="btn btn--accent">
+                {sent ? "Thanks — we'll be in touch!" : HOME.contact.cta}
               </button>
+              <p className="contact-form__note">{HOME.contact.note}</p>
             </form>
           </Reveal>
         </div>

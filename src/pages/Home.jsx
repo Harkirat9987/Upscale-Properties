@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import Reveal from "../components/ui/Reveal";
 import Counter from "../components/ui/Counter";
 import ImgPlaceholder from "../components/ui/ImgPlaceholder";
 import Marquee from "../components/ui/Marquee";
-import Tabs from "../components/ui/Tabs";
 import TeamMember from "../components/ui/TeamMember";
-import SectionHeading from "../components/ui/SectionHeading";
 import { HOME } from "../data/content";
+
+const scrollToId = (id) => (e) => {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+import "./pages-common.css";
 import "./Home.css";
 
 export default function Home() {
+  const [sent, setSent] = useState(false);
+
+  const submit = (e) => {
+    e.preventDefault();
+    setSent(true);
+  };
+
   return (
     <>
       {/* HERO */}
@@ -23,27 +34,31 @@ export default function Home() {
               {HOME.hero.body}
             </Reveal>
             <Reveal delay={220}>
-              <Link to={HOME.hero.cta.to} className="btn btn--accent">
+              <a href="#contact" className="btn btn--accent" onClick={scrollToId("contact")}>
                 {HOME.hero.cta.label}
-              </Link>
+              </a>
             </Reveal>
           </div>
 
           <Reveal variant="zoom" delay={100} className="home-hero__media">
             <ImgPlaceholder ratio="1 / 1" seed={0} />
             <div className="home-hero__stat">
-              <Counter to={HOME.hero.stat.to} suffix={HOME.hero.stat.suffix} />
-              <p>{HOME.hero.stat.label}</p>
+              {HOME.hero.cards.map((c) => (
+                <p key={c}>{c}</p>
+              ))}
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* INTRO STATEMENT */}
-      <section className="section intro-statement">
-        <div className="container">
-          <Reveal as="h1" className="intro-statement__text">
-            {HOME.intro.title}
+      {/* INTRO STATEMENT / ABOUT */}
+      <section className="section intro-statement" id="about">
+        <div className="container intro-statement__inner">
+          <Reveal as="p" className="intro-statement__lead">
+            {HOME.intro.lead}
+          </Reveal>
+          <Reveal as="p" delay={100} className="text-lead intro-statement__body">
+            {HOME.intro.body}
           </Reveal>
         </div>
       </section>
@@ -77,45 +92,8 @@ export default function Home() {
 
       {/* MARQUEE BAND */}
       <div className="marquee-band">
-        <Marquee text="Inspiring architecture for every era" speed={30} />
+        <Marquee text={HOME.marquee} speed={30} />
       </div>
-
-      {/* COLLAGE */}
-      <section className="section section--alt collage">
-        <div className="container collage__grid">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <ImgPlaceholder key={i} ratio="1 / 1" seed={i} className={`collage__item collage__item--${i}`} />
-          ))}
-        </div>
-      </section>
-
-      {/* TABS SHOWCASE */}
-      <section className="section showcase">
-        <div className="container showcase__grid">
-          <div>
-            <Reveal as="h1" className="showcase__heading">
-              Form blends design vision with purpose, creating vibrant, functional, and lasting spaces
-            </Reveal>
-            <Reveal delay={100}>
-              <Link to="/contact-us" className="showcase__link">
-                Ready to get started? <span aria-hidden="true">&rarr;</span>
-              </Link>
-            </Reveal>
-          </div>
-          <Reveal delay={150}>
-            <Tabs items={HOME.tabs} />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* PARTNERS */}
-      <section className="section--tight partners">
-        <div className="container partners__row">
-          {["Studio One", "GreenBuild", "Arbor & Co", "Skyline", "Northwood", "Habitat Co"].map((p) => (
-            <span key={p} className="partners__logo">{p}</span>
-          ))}
-        </div>
-      </section>
 
       {/* TEAM */}
       <section className="section--dark section team-section">
@@ -124,7 +102,7 @@ export default function Home() {
             <Reveal as="p" className="overline">{HOME.team.title}</Reveal>
             <Reveal as="h1" delay={80}>{HOME.team.heading}</Reveal>
           </div>
-          <div className="grid grid-3 team-section__grid">
+          <div className="grid grid-2 team-section__grid">
             {HOME.team.members.map((m, i) => (
               <TeamMember key={m.name} name={m.name} role={m.role} seed={i} delay={i * 100} />
             ))}
@@ -132,32 +110,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ACHIEVEMENTS */}
-      <section className="section achievements">
-        <div className="container">
-          <Reveal as="p" className="overline">{HOME.achievements.title}</Reveal>
-          <Reveal as="h1" delay={80} className="achievements__heading">{HOME.achievements.heading}</Reveal>
-          <div className="grid grid-3 achievements__grid">
-            {HOME.achievements.groups.map((g, i) => (
-              <Reveal key={g.year} delay={i * 100} className="achievements__col">
-                <h6>{g.label}</h6>
-                {g.items.map((it) => <p key={it}>{it}</p>)}
-                <span className="achievements__year">{g.year}</span>
-              </Reveal>
-            ))}
+      {/* CONTACT FORM */}
+      <section className="section cta-band section--dark" id="contact">
+        <div className="container contact-grid">
+          <div>
+            <Reveal as="h2">{HOME.contact.heading}</Reveal>
+            <Reveal delay={100} as="p" className="text-lead">{HOME.contact.body}</Reveal>
+            <Reveal delay={140} as="p" className="text-lead" style={{ fontWeight: 700 }}>{HOME.contact.emphasis}</Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section cta-band section--dark">
-        <div className="container cta-band__inner">
-          <Reveal as="h2">{HOME.cta.title}</Reveal>
-          <Reveal delay={100} as="p" className="text-lead">{HOME.cta.body}</Reveal>
-          <Reveal delay={200}>
-            <Link to={HOME.cta.link.to} className="btn btn--outline">
-              {HOME.cta.link.label}
-            </Link>
+          <Reveal delay={150}>
+            <form className="contact-form" onSubmit={submit}>
+              <input type="text" placeholder="Name" required />
+              <input type="tel" placeholder="Phone Number" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="text" placeholder="Location of Interest" />
+              <textarea placeholder="Message" />
+              <button type="submit" className="btn btn--accent">
+                {sent ? "Thanks — we'll be in touch!" : HOME.contact.cta}
+              </button>
+              <p className="contact-form__note">{HOME.contact.note}</p>
+            </form>
           </Reveal>
         </div>
       </section>

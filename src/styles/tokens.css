@@ -1,11 +1,11 @@
 :root {
   /* ---- Brand palette (client-supplied) ---- */
   --c-verdant: #75AC3A;   /* secondary accent: icons, hovers, badges */
-  --c-evergreen: #0E6033; /* dark surfaces: header, footer, headings, buttons */
-  --c-ivory: #F6F4F0;     /* page background */
+  --c-evergreen: #1D8B4C; /* dark green: text/buttons on the accent background below */
+  --c-ivory: #FBFAF8;     /* page background */
   --c-gold: #D8CD44;      /* highlight accent: links, labels, active states */
 
-  --c-evergreen-dark: #0A4A27;
+  --c-evergreen-dark: #146B39;
   --c-verdant-dark: #5E8C2E;
   --c-gold-dark: #C2B830;
 
@@ -17,10 +17,10 @@
   --c-text: #3B4A3E;
   --c-meta: #8B9488;
 
-  --c-dark-bg: var(--c-evergreen);
-  --c-dark-text: #E7EFE6;
-  --c-dark-meta: #A9C3AC;
-  --c-dark-border: rgba(255, 255, 255, 0.14);
+  --c-dark-bg: #CECF2A;    /* client-provided shade: header, footer, hero, team, contact backgrounds */
+  --c-dark-text: #14532D;
+  --c-dark-meta: #2F6B45;
+  --c-dark-border: rgba(20, 83, 45, 0.18);
 
   /* ---- Typography ---- */
   --font-heading: "Rethink Sans", sans-serif;

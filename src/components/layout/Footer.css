@@ -1,5 +1,5 @@
 .site-footer {
-  background: var(--c-evergreen);
+  background: var(--c-dark-bg);
   color: var(--c-dark-text);
   padding-top: 60px;
   overflow: hidden;
@@ -10,7 +10,7 @@
   border-bottom: 1px solid var(--c-dark-border);
   margin-bottom: 60px;
 }
-.site-footer__marquee .marquee__group { color: var(--c-white); opacity: 1; -webkit-text-stroke: 1.5px var(--c-white); }
+.site-footer__marquee .marquee__group { color: var(--c-dark-text); opacity: 1; -webkit-text-stroke: 1.5px var(--c-dark-text); }
 
 .site-footer__grid {
   display: grid;
@@ -22,22 +22,22 @@
 .site-footer__logo {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--c-white);
+  color: var(--c-dark-text);
   margin-bottom: 18px;
 }
-.site-footer__logo span { color: var(--c-gold); }
+.site-footer__logo span { color: var(--c-evergreen-dark); }
 
 .site-footer__brand p { max-width: 320px; color: var(--c-dark-meta); }
 
-.site-footer h6 { color: var(--c-gold); margin-bottom: 20px; }
+.site-footer h6 { color: var(--c-dark-text); margin-bottom: 20px; }
 
 .site-footer__addr { color: var(--c-dark-meta); margin-bottom: 8px; }
 
 .site-footer__links li { margin-bottom: 12px; }
 .site-footer__links a { color: var(--c-dark-text); transition: color var(--dur-fast) var(--ease); }
-.site-footer__links a:hover { color: var(--c-gold); }
+.site-footer__links a:hover { color: var(--c-evergreen-dark); }
 
 .site-footer__socials { display: flex; gap: 10px; }
 .site-footer__socials a {
@@ -49,13 +49,13 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  color: var(--c-white);
-  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  color: var(--c-dark-text);
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .site-footer__socials a:hover {
-  background: var(--c-gold);
-  border-color: var(--c-gold);
-  color: var(--c-evergreen-dark);
+  background: var(--c-evergreen);
+  border-color: var(--c-evergreen);
+  color: var(--c-white);
   transform: translateY(-3px);
 }
 
@@ -68,7 +68,7 @@
   color: var(--c-dark-meta);
   font-size: 0.85rem;
 }
-.site-footer__bottom a { color: var(--c-gold); }
+.site-footer__bottom a { color: var(--c-evergreen-dark); }
 
 @media (max-width: 900px) {
   .site-footer__grid { grid-template-columns: 1fr 1fr; }

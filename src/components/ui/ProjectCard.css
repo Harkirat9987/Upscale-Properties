@@ -4,5 +4,5 @@
 .project-card:hover .project-card__img { }
 .project-card:hover .img-placeholder { transform: scale(1.05); }
 .project-card__meta .badge { margin-bottom: 12px; background: transparent; border: 1px solid var(--c-border); color: var(--c-verdant-dark); padding: 4px 12px; }
-.project-card__title { margin-bottom: 8px; font-size: 1.2rem; }
+.project-card__title { margin-bottom: 10px; font-size: 1.2rem; }
 .project-card__body { color: var(--c-meta); margin: 0; font-size: 0.92rem; }

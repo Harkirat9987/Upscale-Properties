@@ -8,7 +8,7 @@ export default function NotFound() {
       style={{ minHeight: "70vh", display: "flex", alignItems: "center", textAlign: "center" }}
     >
       <div className="container">
-        <Reveal as="h1" style={{ fontSize: "clamp(4rem, 6rem + 4vw, 9rem)", color: "var(--c-gold)" }}>404</Reveal>
+        <Reveal as="h1" style={{ fontSize: "clamp(4rem, 6rem + 4vw, 9rem)", color: "var(--c-evergreen)" }}>404</Reveal>
         <Reveal as="p" delay={100} className="text-lead" style={{ marginBottom: 30 }}>
           The page you're looking for has moved or no longer exists.
         </Reveal>
