@@ -29,7 +29,7 @@ export default function ContactUs() {
               <input type="email" placeholder="Email Address" required />
               <input type="text" placeholder="Location of Interest" />
               <textarea placeholder="Message" />
-              <button type="submit" className="btn btn--accent">
+              <button type="submit" className="btn btn--primary">
                 {sent ? "Thanks — we'll be in touch!" : HOME.contact.cta}
               </button>
               <p className="contact-form__note">{HOME.contact.note}</p>

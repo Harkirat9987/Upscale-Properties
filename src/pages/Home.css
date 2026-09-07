@@ -44,7 +44,9 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
+  color: var(--c-white);
 }
+.section--dark .home-hero__stat p { color: var(--c-white); }
 .home-hero__stat p:not(:last-child) {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
