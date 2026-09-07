@@ -28,8 +28,8 @@
   position: absolute;
   left: -40px;
   bottom: -30px;
-  background: var(--c-gold);
-  color: var(--c-evergreen-dark);
+  background: var(--c-evergreen);
+  color: var(--c-white);
   padding: 22px 26px;
   border-radius: var(--radius-md);
   max-width: 240px;
@@ -47,7 +47,7 @@
 }
 .home-hero__stat p:not(:last-child) {
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(23, 36, 27, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 @media (max-width: 900px) {

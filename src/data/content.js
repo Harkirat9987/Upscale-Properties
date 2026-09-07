@@ -6,7 +6,7 @@ export const NAV = [
   { label: "Home", target: null },
   { label: "About Us", to: "/about-us" },
   { label: "Projects", to: "/projects" },
-  { label: "Contact Us", target: "contact" },
+  { label: "Contact Us", to: "/contact-us" },
 ];
 
 export const BRAND = "Upscale Properties";
