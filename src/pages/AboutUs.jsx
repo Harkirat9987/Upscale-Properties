@@ -2,9 +2,12 @@ import PageHero from "../components/ui/PageHero";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
 import Counter from "../components/ui/Counter";
-import ImgPlaceholder from "../components/ui/ImgPlaceholder";
 import { ABOUT } from "../data/content";
+import bangaloreImg from "../assets/Bangalore photo in about us.jpg.jpeg";
+import mysoreImg from "../assets/Mysore photo in about us .jpg.jpeg";
 import "./pages-common.css";
+
+const LOCATION_IMAGES = { Bangalore: bangaloreImg, Mysore: mysoreImg };
 
 export default function AboutUs() {
   return (
@@ -12,7 +15,7 @@ export default function AboutUs() {
       <PageHero title="About Us" />
 
       <section className="section">
-        <div className="container" style={{ maxWidth: 780, margin: "0 auto" }}>
+        <div className="container" style={{ maxWidth: 780, marginLeft: 0 }}>
           <Reveal as="h1">{ABOUT.intro.heading}</Reveal>
           <Reveal as="p" delay={60} className="text-lead">{ABOUT.intro.lead}</Reveal>
           {ABOUT.intro.paragraphs.map((p, i) => (
@@ -47,7 +50,7 @@ export default function AboutUs() {
           <div className="grid grid-2" style={{ maxWidth: 700, margin: "0 auto" }}>
             {ABOUT.locations.items.map((loc, i) => (
               <Reveal key={loc.title} delay={i * 100} className="project-card">
-                <ImgPlaceholder ratio="4 / 3" seed={i} className="project-card__img" />
+                <img src={LOCATION_IMAGES[loc.title]} alt={loc.title} className="project-card__img location-photo" />
                 <div className="project-card__meta" style={{ textAlign: "center" }}>
                   <h4 className="project-card__title">{loc.title}</h4>
                 </div>
