@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Reveal from "../components/ui/Reveal";
 import Counter from "../components/ui/Counter";
-import ImgPlaceholder from "../components/ui/ImgPlaceholder";
 import Marquee from "../components/ui/Marquee";
 import TeamMember from "../components/ui/TeamMember";
 import { HOME } from "../data/content";
+import heroImg from "../assets/Homepage Hero Section.jpg.jpeg";
 
 const scrollToId = (id) => (e) => {
   e.preventDefault();
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
           <Reveal variant="zoom" delay={100} className="home-hero__media">
-            <ImgPlaceholder ratio="1 / 1" seed={0} />
+            <img src={heroImg} alt="Aerial view of plotted land development" className="home-hero__img" />
             <div className="home-hero__stat">
               {HOME.hero.cards.map((c) => (
                 <p key={c}>{c}</p>

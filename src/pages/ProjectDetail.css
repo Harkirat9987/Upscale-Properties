@@ -1,0 +1,13 @@
+.project-detail {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.project-detail__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+  margin-bottom: 36px;
+}
+.project-detail__title { margin-bottom: 16px; }

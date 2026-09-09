@@ -3,6 +3,7 @@ import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import OurTeam from "./pages/OurTeam";
 import Testimonials from "./pages/Testimonials";
 import Pricing from "./pages/Pricing";
@@ -32,6 +33,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about-us" element={<AboutUs />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/:city" element={<ProjectDetail />} />
         <Route path="our-team" element={<OurTeam />} />
         <Route path="testimonials" element={<Testimonials />} />
         <Route path="pricing" element={<Pricing />} />

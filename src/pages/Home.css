@@ -24,6 +24,13 @@
 }
 .home-hero__body { max-width: 420px; color: var(--c-dark-text); margin-bottom: 32px; line-height: 1.4; }
 .home-hero__media { position: relative; }
+.home-hero__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
 .home-hero__stat {
   position: absolute;
   left: -40px;
@@ -118,6 +125,5 @@
 .team-section__grid .team-member { text-align: center; }
 
 /* CONTACT (reuses .contact-grid / .contact-form from pages-common.css) */
-.cta-band .contact-form input,
-.cta-band .contact-form textarea { border-color: transparent; }
+.cta-band { background: var(--c-white); }
 .cta-band .contact-form button { margin-top: 6px; }

@@ -46,8 +46,22 @@ export default function Header() {
         <nav className="site-header__nav" aria-label="Primary">
           <ul>
             {NAV.map((item) => (
-              <li key={item.label}>
+              <li key={item.label} className={item.children ? "has-dropdown" : ""}>
                 {renderNavItem(item)}
+                {item.children && (
+                  <ul className="site-header__dropdown">
+                    {item.children.map((child) => (
+                      <li key={child.group}>
+                        <Link to={child.to}>
+                          <span className="site-header__dropdown-group">{child.group}</span>
+                          {child.caption && (
+                            <span className="site-header__dropdown-caption">{child.caption}</span>
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
@@ -74,6 +88,20 @@ export default function Header() {
               <div className="site-header__mobile-row">
                 {renderNavItem(item)}
               </div>
+              {item.children && (
+                <ul className="site-header__mobile-dropdown">
+                  {item.children.map((child) => (
+                    <li key={child.group}>
+                      <Link to={child.to} onClick={() => setMobileOpen(false)}>
+                        <span className="site-header__dropdown-group">{child.group}</span>
+                        {child.caption && (
+                          <span className="site-header__dropdown-caption">{child.caption}</span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>

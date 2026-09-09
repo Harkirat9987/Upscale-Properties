@@ -2,12 +2,25 @@
 
 // `target` scrolls to a section id on the homepage (null = top of page).
 // `to` links to a separate routed page instead.
+// `children` renders a dropdown of grouped sub-links.
 export const NAV = [
   { label: "Home", target: null },
   { label: "About Us", to: "/about-us" },
-  { label: "Projects", to: "/projects" },
+  {
+    label: "Projects",
+    to: "/projects",
+    children: [
+      { group: "Bangalore", to: "/projects/bangalore" },
+      { group: "Mysore", to: "/projects/mysore" },
+    ],
+  },
   { label: "Contact Us", to: "/contact-us" },
 ];
+
+export const PROJECTS = {
+  bangalore: { city: "Bangalore", title: "Hoskote, Bangalore", status: "Coming Soon" },
+  mysore: { city: "Mysore", title: "Mysore", status: "Coming Soon" },
+};
 
 export const BRAND = "Upscale Properties";
 

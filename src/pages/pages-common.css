@@ -24,6 +24,7 @@
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 1.8rem + 1.6vw, 3.2rem);
+  font-weight: 700;
   color: var(--c-evergreen);
   margin-bottom: 8px;
 }
