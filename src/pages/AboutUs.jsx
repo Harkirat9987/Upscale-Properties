@@ -5,6 +5,7 @@ import Counter from "../components/ui/Counter";
 import { ABOUT } from "../data/content";
 import bangaloreImg from "../assets/Bangalore photo in about us.jpg.jpeg";
 import mysoreImg from "../assets/Mysore photo in about us .jpg.jpeg";
+import introImg from "../assets/pexels-h-u-th-nh-79-516407425-37114135.jpg.jpeg";
 import "./pages-common.css";
 
 const LOCATION_IMAGES = { Bangalore: bangaloreImg, Mysore: mysoreImg };
@@ -15,14 +16,19 @@ export default function AboutUs() {
       <PageHero title="About Us" />
 
       <section className="section">
-        <div className="container" style={{ maxWidth: 780, marginLeft: 0 }}>
-          <Reveal as="h1">{ABOUT.intro.heading}</Reveal>
-          <Reveal as="p" delay={60} className="text-lead">{ABOUT.intro.lead}</Reveal>
-          {ABOUT.intro.paragraphs.map((p, i) => (
-            <Reveal as="p" key={i} delay={100 + i * 80}>{p}</Reveal>
-          ))}
-          <Reveal as="p" delay={100 + ABOUT.intro.paragraphs.length * 80} className="text-lead" style={{ color: "var(--c-evergreen)", fontFamily: "var(--font-heading)" }}>
-            {ABOUT.intro.closing}
+        <div className="container two-col">
+          <div>
+            <Reveal as="h1">{ABOUT.intro.heading}</Reveal>
+            <Reveal as="p" delay={60} className="text-lead">{ABOUT.intro.lead}</Reveal>
+            {ABOUT.intro.paragraphs.map((p, i) => (
+              <Reveal as="p" key={i} delay={100 + i * 80}>{p}</Reveal>
+            ))}
+            <Reveal as="p" delay={100 + ABOUT.intro.paragraphs.length * 80} className="text-lead" style={{ color: "var(--c-evergreen)", fontFamily: "var(--font-heading)" }}>
+              {ABOUT.intro.closing}
+            </Reveal>
+          </div>
+          <Reveal variant="zoom" delay={100}>
+            <img src={introImg} alt="Aerial view of plotted farmland" className="location-photo" />
           </Reveal>
         </div>
       </section>
