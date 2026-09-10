@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NAV, BRAND } from "../../data/content";
 import useAnchorNav from "../../hooks/useAnchorNav";
+import logo from "../../assets/Group 39.png";
 import "./Header.css";
 
 export default function Header() {
@@ -40,7 +41,7 @@ export default function Header() {
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container site-header__row">
         <Link to="/" className="site-header__logo" onClick={goTo(null)}>
-          {BRAND}
+          <img src={logo} alt={BRAND} />
         </Link>
 
         <nav className="site-header__nav" aria-label="Primary">

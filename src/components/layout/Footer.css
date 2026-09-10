@@ -21,13 +21,13 @@
 
 .site-footer__logo {
   display: inline-block;
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--c-dark-text);
   margin-bottom: 18px;
 }
-.site-footer__logo span { color: var(--c-evergreen-dark); }
+.site-footer__logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
 
 .site-footer__brand p { max-width: 320px; color: var(--c-dark-meta); }
 

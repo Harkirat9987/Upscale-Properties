@@ -3,6 +3,7 @@ import { FOOTER, BRAND, NAV } from "../../data/content";
 import Marquee from "../ui/Marquee";
 import Reveal from "../ui/Reveal";
 import useAnchorNav from "../../hooks/useAnchorNav";
+import logo from "../../assets/Group 39.png";
 import "./Footer.css";
 
 export default function Footer() {
@@ -16,7 +17,9 @@ export default function Footer() {
 
       <div className="container site-footer__grid">
         <Reveal className="site-footer__brand">
-          <Link to="/" className="site-footer__logo">{BRAND}</Link>
+          <Link to="/" className="site-footer__logo">
+            <img src={logo} alt={BRAND} />
+          </Link>
           <p>{FOOTER.tagline}</p>
         </Reveal>
 
